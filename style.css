@@ -37,6 +37,7 @@ body {
   width: 278px;
   height: 278px;
   display: block;
+  position: relative;
 }
 
 .card-image > .active-icon{
@@ -137,8 +138,17 @@ body {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .card-image > img:hover{
-    opacity: .1;
+    /* opacity: .1; */
     z-index: -1;
+    cursor: pointer;
+    border: 1px solid white;
+    width: 278px;
+    height: 278px;
+    background-color: #00FFF8;
+  }
+
+  .card-image > .active-icon {
+    display: block;
   }
   
   .card-footer > p > span:hover {
