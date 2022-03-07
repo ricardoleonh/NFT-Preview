@@ -59,6 +59,10 @@ body {
   line-height: 28px;
 }
 
+.card-title > h4 >span:hover {
+  cursor: pointer;
+}
+
 .card-description {
   margin: 15px 24px;
   color: #8BACD9;
