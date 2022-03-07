@@ -39,6 +39,10 @@ body {
   display: block;
 }
 
+.card-image > .active-icon{
+  display: none;
+}
+
 .card-image > img {
   width: 100%;
   height: 100%;
@@ -124,3 +128,23 @@ body {
   cursor: pointer;
   color: white;
 }
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .card-image > img:hover{
+    opacity: .1;
+    z-index: -1;
+  }
+  
+  .card-footer > p > span:hover {
+    color: #00FFF8;
+  }
+  
+  .card-title > h4 > span:hover {
+    cursor: pointer;
+    color: #00FFF8;
+  }
+}
+
+
