@@ -37,11 +37,10 @@ body {
   width: 278px;
   height: 278px;
   display: block;
-  position: relative;
 }
 
-.card-image > .active-icon{
-  display: none;
+.icon > img{
+  visibility: hidden;
 }
 
 .card-image > img {
@@ -50,6 +49,7 @@ body {
   object-fit: fill;
   border-radius: 8px;
   margin-top: 24px;
+  visibility: visible;
 }
 
 .card-title {
@@ -137,20 +137,42 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .card-image > img:hover{
-    /* opacity: .1; */
-    z-index: -1;
+  /* .card-image > .active-icon {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  } */
+
+
+
+  .card-image:hover {
     cursor: pointer;
-    border: 1px solid white;
-    width: 278px;
-    height: 278px;
-    background-color: #00FFF8;
   }
 
-  .card-image > .active-icon {
-    display: block;
+  .card-image:hover img {
+    transition: opacity 0.3s, visbility 0.3s;
+    visibility: hidden;
   }
-  
+  /* .icon:hover {
+    visibility: visible;
+    display: flex;
+    background-color: #00FFF8;
+    height: 278px;
+    border-radius: 8px;
+    margin-top: -282px;
+  } */
+
+  /* .icon:hover .active-icon {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+    width: 48px;
+    height:48px;
+    margin-top: -160px;
+    margin-left: 115px;
+  } */
+
   .card-footer > p > span:hover {
     color: #00FFF8;
   }
